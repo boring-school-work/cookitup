@@ -27,5 +27,6 @@ their love for food.
 
 1. Clone the repository in your htdocs folder.
 2. Navigate to the project directory in your terminal.
-3. Start the tailwind development build by running `npm run dev` in the terminal.
-4. Visit `http://localhost/cookitup` in your browser.
+3. Run `npm i` to install tailwind.
+4. Start the tailwind development build by running `npm run dev` in the terminal.
+5. Visit `http://localhost/cookitup` in your browser.
