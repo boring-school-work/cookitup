@@ -8,68 +8,56 @@
     <title>Register Page</title>
     <style>
         body {
-            flex-wrap: wrap;
-            margin:0px;
             display: flex;
-            justify-content: flex-start;
+            orientation:portrait;
+            
         }
-        form {
+        #register-image {
+            max-width: 35%; 
+            height: auto;
+            align-items: flex-start;
+        }
+
+        #form-content {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            
+            align-content: end;
+            width: 35%;
+            height: auto;
+            padding-left: 7%;
+            padding-right: 7%;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            background-color: #dec3a4;
         }
         
-        img {
-            max-width: 50%;
-            height: auto;
-            margin-inline-start: 50%;
-            justify-content: flex-start;
-            
-
-        }
-        #container {
-            background-color: #dec3a4;
-            padding: 20px;
-            width: 50%;
-            margin-inline-end: 0%;
-            justify-content:flex-end;
-           
-        }
-        .flex-container{
-            display: flex;
-            justify-content: flex-start;
-        }
     </style>
 </head>
 <body>
-    <!--Register Page -->
-    <div class="flex-container">
+    <!-- Register Page -->
+    <img src="./../assets/images/register-image.jpg" alt="Food image" id="register-image">
+    <form id="form-content">
+        <h1 style="font-size:x-large" >Create an account</h1>
+        <p>Already Registered? <a href="login.html">Login</a></p> 
+        <hr>
+        <br>
 
-        <form>
-            <div>
-            <img src="./../assets/images/register-image.jpg" alt="Food image" class="place-content-start">
-            </div>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" placeholder=" John "><br>
 
-            <div id="container" class="place-content-end">
-                <h2>Create an account</h2>
-                <p>Already Registered? <a href="login.html">Login</a></p> 
-                <hr>
-                <br>
-                <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname" placeholder="John"><br><br>
-                <label for="surname">Surname:</label><br>
-                <input type="text" id="surname" name="surname" placeholder="Mwangi"><br><br>
-                <label for="email">Email Address:</label><br>
-                <input type="email" id="email" name="email" placeholder="johnmwangi@gmail.com" autocomplete="off"><br><br>
-                <label for="birthday">Date of Birth:</label><br>
-                <input type="date" id="birthday" name="birthday"><br><br>
-                <label for="pwd">Password:</label><br>
-                <input type="password" id="pwd" name="pwd" placeholder="********"><br><br>
-                <input type="button" onclick="alert('Successfully registered!')" value="Register!" class="ring ring-purple-500">
-        </div>
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" placeholder=" Mwangi "><br>
 
-    </div>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder=" johnmwangi@gmail.com " autocomplete="off"><br>
+
+        <label for="birthday">Date of Birth:</label>
+        <input type="date" id="birthday" name="birthday"><br>
+
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd" placeholder=" ******** "><br>
+
+        <input type="button" onclick="alert('Successfully registered!')" value="Register!" class="ring ring-purple-500" style="background-color: #bb86fc;">
     </form>
 </body>
 </html>
