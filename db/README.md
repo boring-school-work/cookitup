@@ -9,21 +9,21 @@
 
 ## Entities
 
-- **Users:** Represents a user of the platform.
-  **Attributes:** user ID, username, password, email, profile picture, bio,
+**Users:** Represents a user of the platform. \
+**Attributes:** user ID, username, password, email, profile picture, bio,
   role ID.
 
-- **Roles:** Represents the role of a user. (creator, reviewer, or both).
-  **Attributes:** role ID, name.
+**Roles:** Represents the role of a user. (creator, reviewer, or both). \
+**Attributes:** role ID, name.
 
-- **Recipes:** Represents a recipe on the platform.
-  **Attributes:** recipe ID, title, description, instructions, cook time, image.
+**Recipes:** Represents a recipe on the platform. \
+**Attributes:** recipe ID, title, description, instructions, cook time, image.
 
-- **Ingredients:** Represent the ingredients used in a recipe.
-  **Attributes:** recipe ID, name, quantity, unit.
+**Ingredients:** Represent the ingredients used in a recipe. \
+**Attributes:** recipe ID, name, quantity, unit.
 
-- **Reviews:** Represents a review of a recipe by a user.
-  **Attributes:** review ID, user ID, recipe ID, rating, comment.
+**Reviews:** Represents a review of a recipe by a user. \
+**Attributes:** review ID, user ID, recipe ID, rating, comment.
 
 ## Relationships
 
