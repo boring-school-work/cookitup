@@ -9,32 +9,26 @@
 
 ## Entities
 
-**User:** Represents a user of the platform.
-**Attributes:** user ID, username, password, email, bio, profile picture, role
-(creator, visitor, reviewer).
+- **Users:** Represents a user of the platform.
+  **Attributes:** user ID, username, password, email, profile picture, bio,
+  role ID.
 
-**Recipe:** Represents a recipe on the platform.
-**Attributes:** recipe ID, title, description, ingredients, instructions,
-cook time, cuisine, dietary restrictions, image.
+- **Roles:** Represents the role of a user. (creator, reviewer, or both).
+  **Attributes:** role ID, name.
 
-**Ingredient:** Represents an ingredient used in a recipe.
-**Attributes:** ingredient ID, name, quantity, unit
+- **Recipes:** Represents a recipe on the platform.
+  **Attributes:** recipe ID, title, description, instructions, cook time, image.
 
-**Review:** Represents a review of a recipe by a user.
-**Attributes:** review ID, user ID, recipe ID, rating, comment
+- **Ingredients:** Represent the ingredients used in a recipe.
+  **Attributes:** recipe ID, name, quantity, unit.
 
-**Category:** Represents a category for recipes (e.g., breakfast, main course, dessert).
-**Attributes:** category ID, name
-
-**Allergy:** Represents an allergy or dietary restriction.
-**Attributes:** allergy ID, name
+- **Reviews:** Represents a review of a recipe by a user.
+  **Attributes:** review ID, user ID, recipe ID, rating, comment.
 
 ## Relationships
 
 - A user can create many recipes.
+- A user can have one or more roles.
 - A recipe can have many ingredients.
 - A user can write many reviews for different recipes.
 - A recipe can have many reviews from different users.
-- A recipe can belong to one category.
-- A user can have many allergies or dietary restrictions.
-- A recipe can consider many allergies or dietary restrictions.
