@@ -10,10 +10,12 @@
 
 <body>
     <div class="container1" id="topBar">
-        <img class="menu-burger" src="images/menu-burger.png" width="40px"; height="auto";/>
+        <img class="menu-burger" src="images/cooking-pot.png" width="40px"; height="auto";/>
         <img src="images/CookitUp white.png" width="180px"; height="auto"; style="float: left; margin-top: 1%;" />
         
-        <a style="margin-right: 100px;"> <img src="images/information.png" class="navbar-icons"/> About </a>
+        <a style="width: 11%; margin-right: 0px; font-size: medium; font-weight: 100;" id="profile-icon"> <img src="images/profile-user.png" class="navbar-icons" /> Not signed in </a>
+
+        <a style="margin-right: 10px;"> <img src="images/information.png" class="navbar-icons"/> About </a>
 
         <a style="width: 9%;"> <img src="images/compas.png" class="navbar-icons"/> Explore  </a>
 
@@ -21,21 +23,40 @@
     </div>
 
     <div class="featured-tab" id="featuredSection">
-        <!-- <img src="images/Foods/Grilled_Cheese_008-1-c81076b16bc44caea8077666695be94d.jpg"> -->
-        <h1 id="feature-text"> 
-            Featured Recipe: <br> 
+        <img src="images/Foods/Grilled_Cheese_008-1-c81076b16bc44caea8077666695be94d.jpg" class="featured-img"/>
+        <h1> 
+            <span id="feature-text"> Featured Recipe </span> <br> 
             <span class="spanH2" id="feature-name">Grilled Cheese Sandwiches</span>
-            <span><img class="rating" src="images/4-star.png" /></span>
-            <span> <p> A grilled cheese sandwich is not diet food. So when I have one, it has to be great! Crispy, salty, buttery exterior and oozy, molten cheese inside. Are you ready to meet the ultimate cheese toastie?? </p> </span>
-            <a> See Recipe → </a>
+            <span><img class="rating" id="featured-rating" src="images/4-star.png" /></span>
+            <span id="featured-desc"> <p> A grilled cheese sandwich is not diet food. So when I have one, it has to be great! Crispy, salty, buttery exterior and oozy, molten cheese inside. Are you ready to meet the ultimate cheese toastie?? </p> </span>
+            <a> See Recipe → </a> 
+            <br>
+            <br>
+            <br>
+            <button id="User button" class="user-profile">
+                User#445
+                <img src="images/Users/a3lh4g4p0w881.jpg" class="user-profile-pic">
+          </button>
         </h1>
+
+        <img src="images/left-chevron.png" class="chevron-left"/>
+        <img src="images/right-chevron.png" class="chevron-right"/>
         <!-- <h2 id="feature-name"> Grilled Cheese Sandwiches </h2> -->
     </div>
 
 
     <br>
     <br>
-    Other Stuff
+    <h1 style="margin-left: 130px; display: flex;">Trending</h1>
+    <div class="search-container">
+        <form action="/action_page.php">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    <br>
+    <br>
+    <br>
     <br>
 
 
