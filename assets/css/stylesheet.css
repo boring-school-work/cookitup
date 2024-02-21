@@ -2,7 +2,16 @@
 body{
     margin: 0px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #F1E8D5;
+    background-image: url("/images/background1.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+}
+
+p{
+    display: flex;
+    font-size: medium;
+    font-family: "Trebuchet MS",;
 }
 
 
@@ -36,6 +45,7 @@ margin-left: 90px;
     width: 8%;
     margin-right: 1%;
     align-items: center;
+    transition: 0.3s;
 }
 
 /* This represents the current page the user is on. Its color is different to highlight it. */
@@ -46,12 +56,13 @@ margin-left: 90px;
 /* Changes color on hover to contrast background color  */
 .container1 a:hover{
     background-color: #8A64D6;
+    color: #99e3ef;
 }
 
 /* Featured tab stlying */
 
 .featured-tab{
-    background-color: rgba(0, 0, 0, 0.293);
+    background-color: rgba(0, 0, 0, 0.501);
     color: white;
     height: 400px;
     margin-bottom: 10px;
@@ -60,11 +71,17 @@ margin-left: 90px;
 }
 
 .featured-tab .featured-img{
+    position: absolute;
     width: 512px;
     border-radius: 20px;
-    margin-left: 70px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    top: 18%;
+    left: 12%;
+    transition: 0.3s;
+}
+
+.featured-tab .featured-img:hover{
+    transform: scale(1.03);
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.275);
 }
 
 .featured-tab h1{
@@ -95,13 +112,13 @@ margin-left: 90px;
 }
 
 .featured-tab .rating{
-    width: 128px;
+    width: 100px;
 }
 
 .featured-tab a{
     color: #ffffff;
     text-decoration: none;
-    font-weight: 150px;
+    font-weight: 100px;
     border-radius: 30px;
     background-color: #8a64d6cb;
     padding: 17px;
@@ -109,5 +126,78 @@ margin-left: 90px;
     width: 8%;
     margin-right: 1%;
     align-items: center;
+    transition: 0.3s;
 }
 
+.featured-tab a:hover{
+    background-color: #7d3cffcb;
+    color: #bceef6;
+}
+
+/* User Profile Button */
+
+.user-profile-pic{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.user-profile{
+    color: #ffffff;
+    font-weight: 150px;
+    border-radius: 15px;
+    background-color: #8a64d600;
+    padding: 8px;
+    font-size: 15px;
+    width: 200px;
+    margin-right: 1%;
+    transition: 0.3s;
+}
+
+.user-profile:hover{
+    background-color: #729EFD;
+    color: #f4f8f9;
+}
+
+/* Left and right Arrows */
+.featured-tab .chevron-left{
+    width: 100px;
+    position: absolute;
+    top: 35%;
+    left: 1%;
+    border-radius: 30px;
+    transition: 0.15s;
+}
+
+.featured-tab .chevron-left:hover{
+    background-color: #7d3cffcb;
+}
+
+.featured-tab .chevron-right{
+    width: 100px;
+    position: absolute;
+    top: 35%;
+    right: 1%;
+    border-radius: 30px;
+    transition: 0.15s;
+}
+
+.featured-tab .chevron-right:hover{
+    background-color: #7d3cffcb;
+}
+
+.search-container {
+    overflow: hidden;
+    background-color: #e9e9e9;
+    float: left;
+  }
+
+  .search-container button {
+    padding: 4px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
