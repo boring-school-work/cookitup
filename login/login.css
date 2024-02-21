@@ -2,13 +2,10 @@
                                                 
 
 body {
-
     position: absolute;
     margin: auto;
     padding: auto;
-    padding-top: 5%;
-    font-family: Arial, sans-serif;
-     
+    font-family: Arial, sans-serif;    
 }
 
 .container {
@@ -26,7 +23,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-color: green;
 }
 
 .left img {
@@ -45,6 +41,7 @@ body {
     height: 100vh;
     background-color: #e2c29d;
     position: relative; 
+
 }
 
 
