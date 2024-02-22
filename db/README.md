@@ -11,19 +11,19 @@
 
 **Users:** Represents a user of the platform. \
 **Attributes:** user ID, username, password, email, profile picture, bio,
-  role ID.
+role ID, created_at.
 
 **Roles:** Represents the role of a user. (creator, reviewer, or both). \
 **Attributes:** role ID, name.
 
 **Recipes:** Represents a recipe on the platform. \
-**Attributes:** recipe ID, title, description, instructions, cook time, image.
+**Attributes:** recipe ID, title, description, instructions, cook time, image, author ID.
 
 **Ingredients:** Represent the ingredients used in a recipe. \
 **Attributes:** recipe ID, name, quantity, unit.
 
 **Reviews:** Represents a review of a recipe by a user. \
-**Attributes:** review ID, user ID, recipe ID, rating, comment.
+**Attributes:** review ID, user ID, recipe ID, rating, comment, created_at.
 
 ## Relationships
 
