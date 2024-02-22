@@ -1,9 +1,9 @@
-drop database if exists Vault;
-create database Vault;
-use Vault;
+drop database if exists GRP13_2025;
+create database GRP13_2025;
+use GRP13_2025;
 
 --
--- Database: `Vault`
+-- Database: `GRP13_2025`
 --
 
 -- --------------------------------------------------------
