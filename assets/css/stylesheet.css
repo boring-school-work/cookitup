@@ -2,7 +2,7 @@
 body{
     margin: 0px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-image: url("/images/background1.png");
+    background-image: url("../../images/background1.png");
     background-repeat: no-repeat;
     background-attachment: fixed;  
     background-size: cover;
@@ -151,7 +151,7 @@ margin-left: 90px;
     border: none;
     outline: none;
     overflow: hidden;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Courier New', monospace;
     font-weight: 500px;
     border-radius: 15px;
     cursor: pointer;
@@ -192,7 +192,7 @@ margin-left: 90px;
     border: none;
     outline: none;
     overflow: hidden;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Courier New', monospace;
     font-weight: 500px;
     border-radius: 6px;
     cursor: pointer;
@@ -262,7 +262,7 @@ margin-left: 90px;
   .search-bar{
     width: 100%;
     max-width: 900px;
-    background-image: url(/images/foodDarkBlue.jpg);
+    background-image: url(../../images/foodDarkBlue.jpg);
     /* background: cover; */
     display: flex;
     align-items: center;
