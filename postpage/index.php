@@ -16,7 +16,6 @@
             align-items: center; 
             justify-content: space-between; 
             color: aqua;
-            padding: 0px 20px;
         }
         
         button {
@@ -26,6 +25,7 @@
             color: black; 
             border-radius: 8px;
             cursor: pointer; 
+            margin-left: 20px;
         }
         button:hover {
             background-color: #007bff; 
@@ -62,7 +62,10 @@
         }
         a{
           justify-content:end; 
-          margin-right: px;
+          margin-right: 0px;
+        }
+        .description{
+            margin-left: 20px;
         }
         
 
