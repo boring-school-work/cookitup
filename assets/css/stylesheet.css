@@ -304,15 +304,19 @@ margin-left: 90px;
 
 
   /* Explore Section Styling */
-  .explore-row1{
-    display: inline-block;
+  .explore-row{
+    display: inline-flex;
     align-items: center;
     vertical-align: top;
-    padding: 40px;
+    padding: 20px 0;
     width: 100%;
   }
 
   .recipe-card{
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 0px;
     width: 250px;
     overflow: hidden;
     cursor: pointer;
