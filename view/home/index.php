@@ -205,7 +205,7 @@
     <br>
     <br>
 
-<script src="assets/js/homepage.js"></script>
+<script src="../../assets/js/homepage.js"></script>
 </body>
 
 </html>
