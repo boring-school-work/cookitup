@@ -16,6 +16,10 @@
             align-items: center; 
             justify-content: space-between; 
             color: aqua;
+<<<<<<< HEAD
+=======
+            padding: 0px 20px;
+>>>>>>> 7f698630fe958001076d9e1383d6db0fe4f7ddbf
         }
         
         button {
@@ -25,7 +29,10 @@
             color: black; 
             border-radius: 8px;
             cursor: pointer; 
+<<<<<<< HEAD
             margin-left: 20px;
+=======
+>>>>>>> 7f698630fe958001076d9e1383d6db0fe4f7ddbf
         }
         button:hover {
             background-color: #007bff; 
@@ -62,10 +69,14 @@
         }
         a{
           justify-content:end; 
+<<<<<<< HEAD
           margin-right: 0px;
         }
         .description{
             margin-left: 20px;
+=======
+          margin-right: px;
+>>>>>>> 7f698630fe958001076d9e1383d6db0fe4f7ddbf
         }
         
 
@@ -100,3 +111,7 @@
 
 </body>
 </html>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7f698630fe958001076d9e1383d6db0fe4f7ddbf
