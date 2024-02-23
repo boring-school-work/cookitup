@@ -17,7 +17,8 @@ p{
 
 /* Top Navigation Bar Styling */
 .container1{
-    background-color: #3ACADF;
+    background-color: #729EFD;
+    background-image: linear-gradient(to left, #729EFD, #729EFD, #8A64D6, #5C3A92);
     overflow: hidden;
 }
 
@@ -43,7 +44,7 @@ margin-left: 90px;
     color: white;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
-    background-color: #3ACADF;
+    background-color: transparent;
     padding: 17px;
     font-size: 20px;
     float: right;
@@ -97,19 +98,10 @@ margin-left: 90px;
 }
 
 .featured-tab .spanH2{
-    /* float: right; */
-    /* width: 400px;
-    margin-top: 60px;
-    margin-right: 150px;
-    text-align: right; */
     font-size: xx-large;
 }
 
 .featured-tab p{
-    /* float: right;
-    width: 500px;
-    margin-right: 150px;
-    text-align: right; */
     font-weight: 100;
     font-size: medium;
 }
@@ -144,7 +136,6 @@ margin-left: 90px;
 }
 
 /* User Profile Button */
-
 .user-profile-pic{
     height: 50px;
     width: 50px;
@@ -185,6 +176,47 @@ margin-left: 90px;
     height: 100%;
 }
 
+/* Same stuff, mini button */
+.mini-user-profile-pic{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.mini-user-button{
+    color: black;
+    display: inline-flex;
+    height: 33px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #8a64d600;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.mini-user-button:hover{
+    background-color: rgba(0, 0, 0, 0.193);
+    color: #120724;
+}
+
+.mini-user-button:active{
+    background-color: rgba(0, 0, 0, 0.474);
+    color: whitesmoke;
+}
+
+.mini-button-text,
+.mini-button-icon{
+    display: inline-flex;
+    align-items: center;
+    padding: 0 6px;
+    height: 100%;
+}
+
 /* Left and right Arrows */
 .featured-tab .chevron-left{
     width: 100px;
@@ -214,21 +246,22 @@ margin-left: 90px;
     background-color: #7d3cffcb;
 }
 
+
+/* Search Bar stuff */
 .search-container {
-    width: 100%;
-    min-height: 100vh;
-    padding: 5%;
-    /* background-image: linear-gradient(#0CEAD9, #3ACADF, #729EFD, #8A64D6, #5C3A92), url(/images/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg);
-    background-position: center;
-    background-size: cover; */
+    /* width: 100%; */
+    min-height: 10vh;
+    padding: 0%;
+    padding-left: 14%;
     display: flex;
     align-items: center;
   }
 
   .search-bar{
     width: 100%;
-    max-width: 700px;
-    background: linear-gradient(to right, #0cead882, #3ac9df80, #729efd80, #8a64d680, #5c3a927e);
+    max-width: 900px;
+    background-image: url(/images/foodDarkBlue.jpg);
+    /* background: cover; */
     display: flex;
     align-items: center;
     border-radius: 60px;
@@ -241,13 +274,13 @@ margin-left: 90px;
     flex: 1;
     border: 0;
     outline: none;
-    padding: 24px 20px;
+    padding: 0px 20px;
     font-size: 20px;
-    color: #000000bf;
+    color: white;
   }
 
   ::placeholder{
-    color: #00000084;
+    color: white;
   }
 
   .search-bar button img{
@@ -261,4 +294,55 @@ margin-left: 90px;
     height: 60px;
     background: #00000033;
     cursor: pointer;
+    transition: 0.15s;
+  }
+
+  .search-bar button:hover{
+    background-color: #7d3cffcb;
+    transform: scale(1.1);
+  }
+
+
+  /* Explore Section Styling */
+  .explore-row1{
+    display: inline-block;
+    align-items: center;
+    vertical-align: top;
+    padding: 40px;
+    width: 100%;
+  }
+
+  .recipe-card{
+    width: 250px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+  }
+
+  .recipe-card:hover{
+    transform: scale(1.03);
+    box-shadow: -2px 2px 0px 2px rgba(0, 0, 0, 0.275);
+  }
+
+  .recipe-card .recipe-img{
+    width: 250px;
+    height: 200px;
+  }
+
+  .card-data{
+    background-color: whitesmoke;
+    padding: 12px 10px;
+    overflow: hidden;
+    font-size: large;
+    font-weight: 200;
+    color: black;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+
+  .card-data .rating{
+    margin-top: 5px;
+    width: 80px;
   }

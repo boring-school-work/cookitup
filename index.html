@@ -4,22 +4,22 @@
 <head>
     <meta charset="UTF-8" content="width=device-width, initial-scale=1">
     <title>CookitUp</title>
-    <link rel="icon" id="Favicon" type="image" href="images/cooking-pot.png">
+    <link rel="icon" id="Favicon" type="image" href="images/chef-hat.png">
     <link rel="stylesheet" href="assets/css/stylesheet.css">
 </head>
 
 <body>
     <div class="container1" id="topBar">
-        <img class="menu-burger" src="images/cooking-pot.png" width="40px"; height="auto";/>
+        <img class="menu-burger" src="images/chef-hat.png" width="40px"; height="auto";/>
         <img src="images/CookitUp white.png" width="180px"; height="auto"; style="float: left; margin-top: 1%;" />
         
         <a style="width: 11%; margin-right: 0px; font-size: medium; font-weight: 100;" id="profile-icon"> <img src="images/profile-user.png" class="navbar-icons" /> Not signed in </a>
 
         <a style="margin-right: 10px;"> <img src="images/information.png" class="navbar-icons"/> About </a>
 
-        <a style="width: 9%;"> <img src="images/compas.png" class="navbar-icons"/> Explore  </a>
+        <!-- <a style="width: 9%;"> <img src="images/compas.png" class="navbar-icons"/> Explore  </a> -->
 
-        <a class="current"> <img src="images/chef-hat.png" class="navbar-icons"> Home </a>
+        <a class="current"> <img src="images/compas.png" class="navbar-icons"> Home </a>
     </div>
 
     <div class="featured-tab" id="featuredSection">
@@ -33,7 +33,7 @@
             <br>
             <br>
             <button type="button" id="User button" class="user-button">
-                <span class="button-text">User#445 </span>
+                <span class="button-text"> The Clean Goblin </span>
                 <span class="button-icon"><img src="images/Users/a3lh4g4p0w881.jpg" class="user-profile-pic"></span>
           </button>
         </h1>
@@ -42,17 +42,52 @@
         <img src="images/right-chevron.png" class="chevron-right"/>
     </div>
 
+    <br>
+    <br>
 
-    <br>
-    <br>
-    <h1 style="margin-left: 130px; display: flex;">Explore</h1>
+    <div class="explore-tab">
+    <h1 style="margin-left: 100px; color: #8A64D6; font-family: Cambria;">Explore</h1>
 
     <div class="search-container">
         <form action="/action_page.php" class="search-bar">
-          <input type="text" placeholder="Search.." name="search">
-          <button type="submit"> <img src="images/menu-burger.png"> </button>
+          <input type="text" placeholder="Search Recipe..." name="search">
+          <button type="submit"> <img src="images/search23.png"> </button>
         </form>
       </div>
+    
+    <div class="explore-row1">
+
+        <div class="recipe-card"> <img src="images/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg" class="recipe-img"/> 
+            <div class="card-data">
+             This recipe <br>
+             <img src="images/5-star.png" class="rating">
+             <button type="button" id="UserButton" class="mini-user-button">
+                <span class="mini-button-icon"><img src="images/Users/a3lh4g4p0w881.jpg" class="mini-user-profile-pic"></span>
+                <span class="mini-button-text"> The Clean Goblin </span>
+          </button>
+            </div> 
+        </div>
+
+        <div class="recipe-card"> <img src="images/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg" class="recipe-img"/> 
+            <div class="card-data">
+             This recipe <br>
+             <img src="images/5-star.png" class="rating">
+             <button type="button" id="UserButton" class="mini-user-button">
+                <span class="mini-button-icon"><img src="images/Users/a3lh4g4p0w881.jpg" class="mini-user-profile-pic"></span>
+                <span class="mini-button-text"> The Clean Goblin </span>
+          </button>
+            </div> 
+        </div>
+
+    </div>
+
+    <div class="explore-row2"></div>
+
+    <div class="explore-row3"></div>
+
+    <div class="explore-row4"></div>
+
+    </div>
     <br>
     <br>
     <br>
