@@ -16,13 +16,12 @@
             <h2>Login</h2>
             <p>Sign in to continue</p> 
             <br> 
-            <hr style="width: 80%;
-    border-color: blueviolet;
+            <hr style="width: 100%;
     margin-top: 20px;;"> <br>
             <form id="loginForm" action="login.php" method="POST">
                 <input type="email" name="email" placeholder="Email" required> <br><br>
                 <input type="password" name="password" id="password" placeholder="Password" required> <br>
-                <button type="submit">Login</button>
+                <button type="submit">LOGIN</button>
             </form>
             <p>Don't have an account? <a href="register.html">Click here to register</a></p>
         </div>

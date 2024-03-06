@@ -16,37 +16,32 @@
             align-items: center; 
             justify-content: space-between; 
             color: aqua;
-<<<<<<< HEAD
-=======
-            padding: 0px 20px;
->>>>>>> 7f698630fe958001076d9e1383d6db0fe4f7ddbf
         }
         
         button {
-            padding: 10px 15px; 
+            margin-left: 41vw; 
+            width: 8vw;
+            height: 5vh;
             border: none; 
             background-color: aqua; 
             color: black; 
             border-radius: 8px;
             cursor: pointer; 
-<<<<<<< HEAD
             margin-left: 20px;
-=======
->>>>>>> 7f698630fe958001076d9e1383d6db0fe4f7ddbf
         }
         button:hover {
             background-color: #007bff; 
         }
         .description textarea {
-            width: 50%;
-            height: 150px;
+            width: 50vw;
+            height: 20vw;
             padding: 10px;
             margin-top: 20px;
             resize: none;
         }
         body{
             margin-top: 1px;
-            background-color: #dec3a4;
+            background-color: burlywood;
         }
         .glyphicon {
             font-family: "Glyphicons Halflings";
@@ -62,21 +57,18 @@
 
 
         img{
+            padding-top: 5%;
+            padding-right: 0px;
             float: inline-end;
-            min-width: 15cm;
-            margin-right: 0px;
-            height: 12cm;
+            width: 30vw;
+            height: 50vh;
         }
         a{
           justify-content:end; 
-<<<<<<< HEAD
           margin-right: 0px;
         }
         .description{
             margin-left: 20px;
-=======
-          margin-right: px;
->>>>>>> 7f698630fe958001076d9e1383d6db0fe4f7ddbf
         }
         
 
@@ -86,7 +78,7 @@
 <body>
     <!-- Top bar Navigation -->
     <div class="navigation" class="topnav">
-        <h1 style="font-size:60px; color:#2e5da1;"  >cookitup</h1> 
+        <h1 style="font-size:60px; color:#2e5da1;"  >CookitUp</h1> 
 
         <a href="#home" style="font-size: x-large; color:#2e5da1;" >Home</a>
         <a href="#about" style="font-size: x-large; color:#2e5da1">About</a>
@@ -96,12 +88,11 @@
 
     </div>
 
-    <img src="./../assets/images/postimage.jpg"
+    <img src="./../assets/images/postpage.jpg"
 
     <div class="description">   
         <div class="description">
         <h3 style="font-family:Georgia, 'Times New Roman', Times, serif;" >Write your Recipe here</h3>
-            <h4 style="font-family:Georgia, 'Times New Roman', Times, serif;">Description</h4>
             <textarea placeholder="Write a description for this recipe..."></textarea>
 
         </div>
@@ -111,7 +102,3 @@
 
 </body>
 </html>
-<<<<<<< HEAD
-=======
-
->>>>>>> 7f698630fe958001076d9e1383d6db0fe4f7ddbf
