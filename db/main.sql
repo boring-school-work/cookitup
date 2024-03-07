@@ -24,13 +24,14 @@ CREATE TABLE roles (
 
 CREATE TABLE users (
   user_id INT PRIMARY KEY AUTO_INCREMENT,
-  username VARCHAR(50) NOT NULL UNIQUE,
+  fname VARCHAR(50) NOT NULL UNIQUE,
+  lname VARCHAR(50) NOT NULL UNIQUE,
   email VARCHAR(50) NOT NULL UNIQUE,
   password CHAR(70) NOT NULL, #if using PASSWORD_DEFAULT hashing methos
   profile_picture VARBINARY(100),  #Storing this directly here is not ideal
   bio TEXT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  role_id INT,
+  role_id INT DEFAULT 3,
   FOREIGN KEY (role_id) REFERENCES roles(role_id)  
   
 );
