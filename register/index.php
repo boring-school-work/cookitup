@@ -19,7 +19,7 @@
         <h1 class="text-4xl">Create An Account</h1>
         <div class="pb-4">Already Registered? <a class="text-purple-700 font-semibold" href="./../login/">Login</a></div>
       </div>
-      <form id="register" name="register" class="w-1/2">
+      <form id="register" name="register" class="w-1/2" method="post" action="../action/register_user.php">
         <div class="flex flex-col mb-4">
           <label for="fname" class="text-left text-lg">First name:</label>
           <input type="text" id="fname" name="fname" placeholder=" John " class="px-10 py-3 rounded-sm" required>
