@@ -39,7 +39,7 @@
         }
         body{
             margin-top: 1px;
-            background-color: #dec3a4;
+            background-color: burlywood;
         }
         .glyphicon {
             font-family: "Glyphicons Halflings";
