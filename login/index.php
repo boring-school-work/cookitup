@@ -21,16 +21,19 @@
       <hr style="width: 80%;
     border-color: blueviolet;
     margin-top: 20px;;"> <br>
-      <form id="loginForm" action="login.php" method="POST">
-        <input type="email" name="email" placeholder="Email" required> <br><br>
-        <input type="password" name="password" id="password" placeholder="Password" required> <br>
+      <form id="loginForm" name="loginForm" action="../action/login_user.php" method="POST">
+        <?php
+        if (isset($_GET['status']) == 'fail') {
+          echo "<p style='color:red; font-weight:bold'>incorrect username or password</p>";
+        }
+        ?>
+        <input type="email" name="email" placeholder="Email" id="email" required pattern="^[a-z._\-0-9]*[@][a-z]*.(?:...com)$"> <br><br>
+        <input type="password" name="password" id="password" placeholder="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"> <br>
         <button type="submit">Login</button>
       </form>
       <p>Don't have an account? <a href="../register/">Click here to register</a></p>
     </div>
   </div>
-
-  <script src="../assets/js/login.js"></script>
 </body>
 
 </html>
