@@ -7,6 +7,7 @@
   <title>Cookitup - Post Page</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/css/navbar.css">
   <style>
     * {
       box-sizing: border-box;
@@ -44,7 +45,7 @@
     }
 
     body {
-      margin-top: 1px;
+      margin: 0px;
       background-color: #dec3a4;
     }
 
@@ -62,34 +63,38 @@
     }
 
 
-    img {
+    .postimage{
       float: inline-end;
       min-width: 15cm;
       margin-right: 0px;
       height: 12cm;
     }
 
-    a {
+    /* a {
       justify-content: end;
       margin-right: px;
-    }
+    } */
+
   </style>
 </head>
 
 <body>
+  
   <!-- Top bar Navigation -->
-  <div class="navigation" class="topnav">
-    <h1 style="font-size:60px; color:#2e5da1;">cookitup</h1>
+  <div class="container1" id="topBar">
+        <img class="menu-burger" src="../../assets/images/chef-hat.png" width="40px"; height="auto";/>
+        <img src="../../assets/images/CookitUp white.png" width="180px"; height="auto"; style="float: left; margin-top: 1%;" />
+        
+        <a style="width: 11%; margin-right: 0px; font-size: medium; font-weight: 100;" id="profile-icon"> <img src="../../assets/images/profile-user.png" class="navbar-icons" /> Not signed in </a>
 
-    <a href="#home" style="font-size: x-large; color:#2e5da1;">Home</a>
-    <a href="#about" style="font-size: x-large; color:#2e5da1">About</a>
-    <a href="#recipe" style="font-size: x-large; color:#2e5da1">Recipe</a>
-    <a href="#profile" style="font-size: x-large; color:#2e5da1"><i class="glyphicon glyphicon-user "></i></a>
+        <a style="margin-right: 10px;"> <img src="../../assets/images/information.png" class="navbar-icons"/> About </a>
 
+        <!-- <a style="width: 9%;"> <img src="../../assets/images/compas.png" class="navbar-icons"/> Explore  </a> -->
 
-  </div>
+        <a class="current"> <img src="../../assets/images/compas.png" class="navbar-icons"> Home </a>
+    </div>
 
-  <img src="../../assets/images/postimage.jpg" <div class="description">
+  <img class="postimage" src="../../assets/images/postimage.jpg">
   <div class="description">
     <h3 style="font-family:Georgia, 'Times New Roman', Times, serif;">Write your Recipe here</h3>
     <h4 style="font-family:Georgia, 'Times New Roman', Times, serif;">Description</h4>
