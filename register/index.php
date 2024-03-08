@@ -103,6 +103,7 @@
       </div>
       <input type="submit" value="SIGN UP" class="text-white font-semibold bg-purple-400 px-10 py-2 rounded-md mt-4 cursor-pointer">
     </form>
+
   </div>
 </body>
 </html>
