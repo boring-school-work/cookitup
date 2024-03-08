@@ -10,7 +10,7 @@ const featuredLeftArrow = document.querySelector("#left-arrow");
 const featuredRightArrow = document.querySelector("#right-arrow");
 
 // Data arrays
-const imageList = ["../../images/Foods/Grilled_Cheese_008-1-c81076b16bc44caea8077666695be94d.jpg", "../../images/Foods/Honey-Garlic-Chicken-Breast_4.png", "../../images/Foods/pizza_cheese.webp", "../../images/Foods/portal-cake-10.jpg"];
+const imageList = ["../../assets/images/Foods/Grilled_Cheese_008-1-c81076b16bc44caea8077666695be94d.jpg", "../../assets/images/Foods/Honey-Garlic-Chicken-Breast_4.png", "../../assets/images/Foods/pizza_cheese.webp", "../../assets/images/Foods/portal-cake-10.jpg"];
 const nameList = ["Grilled Cheese Sandwiches", "Honey Garlic Chicken Breast", "Homemade Pizza", "Delicious Cake"];
 const ratingList = [4, 5, 3, 1];
 const descriptionList = ["A grilled cheese sandwich is not diet food. So when I have one, it has to be great! Crispy, salty, buttery exterior and oozy, molten cheese inside. Are you ready to meet the ultimate cheese toastie??",
@@ -18,7 +18,7 @@ const descriptionList = ["A grilled cheese sandwich is not diet food. So when I 
 "Every great pizza begins with a great pizza crust. Some like it thin and crispy, while others prefer a thick and soft crust. This homemade pizza crust has it all: soft & chewy with a delicious crisp and AWESOME flavor.",
 "This cake is great. It's so delicious and moist. Uh oh. Somebody cut the cake. I told them to wait for you, but they did it anyway. There is still some left, though, if you hurry to the recipe page."];
 const usernameList = ["The Clean Goblin", "Mr. Afton", "Freeman", "<span style='font-family:Courier New'>Caroline</span>"];
-const usericonList = ["../../images/Users/a3lh4g4p0w881.jpg", "../../images/Users/WillyA.webp", "../../images/Users/FreemanAlyx.webp", "../../images/Users/hero-image.webp"];
+const usericonList = ["../../assets/images/Users/a3lh4g4p0w881.jpg", "../../assets/images/Users/WillyA.webp", "../../assets/images/Users/FreemanAlyx.webp", "../../assets/images/Users/hero-image.webp"];
 let foodNo = 0;
 
 // Change functions
@@ -31,7 +31,7 @@ function changeFeaturedName(name) {
 }
 
 function changeFeaturedRating(rating) {
-    featuredRating.src = "../../images/" + rating + "-star.png";
+    featuredRating.src = "../../assets/images/" + rating + "-star.png";
 }
 
 function changeFeaturedDescription(description) {
