@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cookitup - Post Page</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="../../assets/css/navbar.css">
   <style>
     * {
@@ -42,11 +42,13 @@
       padding: 10px;
       margin-top: 20px;
       resize: none;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     body {
       margin: 0px;
       background-color: #dec3a4;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     .glyphicon {
@@ -82,7 +84,7 @@
   
   <!-- Top bar Navigation -->
   <div class="container1" id="topBar">
-        <img class="menu-burger" src="../../assets/images/chef-hat.png" width="40px"; height="auto";/>
+        <img class="menu-burger" src="../../assets/images/chef-hat.png" width="64px"; height="auto";/>
         <img src="../../assets/images/CookitUp white.png" width="180px"; height="auto"; style="float: left; margin-top: 1%;" />
         
         <a style="width: 11%; margin-right: 0px; font-size: medium; font-weight: 100;" id="profile-icon"> <img src="../../assets/images/profile-user.png" class="navbar-icons" /> Not signed in </a>

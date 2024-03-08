@@ -6,9 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CookitUp - Login</title>
   <link rel="stylesheet" href="../assets/css/login.css">
+  <link rel="stylesheet" href="../assets/css/navbar.css">
 </head>
 
+<style> b{margin: 0px;} </style>
+
 <body>
+ <!-- Top bar Navigation -->
+ <div class="container1" id="topBar">
+        <img class="menu-burger" src="../assets/images/chef-hat.png" width="40px"; height="auto";/>
+        <img src="../assets/images/CookitUp white.png" width="180px"; height="auto"; style="float: left; margin-top: 1%;" />
+        
+        <a style="width: 11%; margin-right: 0px; font-size: medium; font-weight: 100;" id="profile-icon"> <img src="../assets/images/profile-user.png" class="navbar-icons" /> Not signed in </a>
+
+        <a style="margin-right: 10px;"> <img src="../assets/images/information.png" class="navbar-icons"/> About </a>
+
+        <!-- <a style="width: 9%;"> <img src="../assets/images/compas.png" class="navbar-icons"/> Explore  </a> -->
+
+        <a class="current"> <img src="../assets/images/compas.png" class="navbar-icons"> Home </a>
+    </div>
+
   <div class="container">
     <div class="left">
       <img src="../assets/images/login.jpg" alt="CookitUP">
