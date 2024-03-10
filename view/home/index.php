@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+$path = "";
+$name = "";
+
+if (isset($_SESSION['username'])) {
+  $path = "../../logout/";
+  $name = $_SESSION['username'];
+} else {
+  $path = "../../login/";
+  $name = "Not signed in";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,14 +39,22 @@
         <img src="../../images/compas.png" class="w-10 object-contain h-auto" />
         <p>Home</p>
       </a>
-      <a href="../create/" class="flex justify-center items-center gap-x-1">
-        <img src=" ../../assets/images/create-icon.svg" alt="profile icon" class="w-10 object-contain h-auto" />
+      <?php
+      // show create button if user is a creator
+      if ($_SESSION['role_id'] == 1 || $_SESSION['role_id'] == 3) {
+        echo "<a href='../create/' class='flex justify-center items-center gap-x-1'>
+        <img src='../../assets/images/create-icon.svg' alt='profile icon' class='w-10 object-contain h-auto' />
         <p>Create</p>
-      </a>
-      <a href="../../login/" class="flex justify-center items-center gap-x-2">
-        <img src=" ../../assets/images/profile-user.png" alt="profile icon" class="w-10 object-contain h-auto" />
-        <p>Not signed in</p>
-      </a>
+      </a>";
+      }
+
+      // dynamically login or logout button
+      echo "
+      <a href='$path' class='flex justify-center items-center gap-x-2'>
+        <img src=' ../../assets/images/profile-user.png' alt='profile icon' class='w-10 object-contain h-auto' />
+        <p>$name</p>
+      </a>";
+      ?>
     </div>
   </header>
 
