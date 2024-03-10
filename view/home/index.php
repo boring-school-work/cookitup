@@ -6,21 +6,35 @@
   <title>CookitUp</title>
   <link rel="icon" id="Favicon" type="image" href="../../images/chef-hat.png">
   <link rel="stylesheet" href="../../assets/css/stylesheet.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/output.css">
 </head>
 
 <body>
-  <div class="container1" id="topBar">
-    <img class="menu-burger" src="../../images/chef-hat.png" width="40px" ; height="auto" ; />
-    <img src="../../images/CookitUp white.png" width="180px" ; height="auto" ; style="float: left; margin-top: 1%;" />
-
-    <a style="width: 11%; margin-right: 0px; font-size: medium; font-weight: 100;" href="../../login/" id="profile-icon"> <img src="../../images/profile-user.png" class="navbar-icons" /> Login </a>
-
-    <a style="margin-right: 10px;"> <img src="../../images/information.png" class="navbar-icons" /> About </a>
-
-    <!-- <a style="width: 9%;"> <img src="../../images/compas.png" class="navbar-icons"/> Explore  </a> -->
-
-    <a class="current"> <img src="../../images/compas.png" class="navbar-icons"> Home </a>
-  </div>
+  <header class="bg-gradient-to-r from-purple-500 from-30% to-blue-400 flex py-3 px-8">
+    <div class="grow">
+      <div class="flex">
+        <img src="../../assets/images/chef-hat.png" alt="chef hat" class="w-10 h-auto object-contain" />
+        <a href="./">
+          <img src="../../assets/images/CookitUp white.png" alt="cookitup logo" class="w-44 h-auto" />
+        </a>
+      </div>
+    </div>
+    <div class="flex gap-x-5 justify-center items-center text-white font-semibold">
+      <a href="./" class="flex justify-center items-center gap-x-2">
+        <img src="../../images/compas.png" class="w-10 object-contain h-auto" />
+        <p>Home</p>
+      </a>
+      <a href="../create/" class="flex justify-center items-center gap-x-1">
+        <img src=" ../../assets/images/create-icon.svg" alt="profile icon" class="w-10 object-contain h-auto" />
+        <p>Create</p>
+      </a>
+      <a href="../../login/" class="flex justify-center items-center gap-x-2">
+        <img src=" ../../assets/images/profile-user.png" alt="profile icon" class="w-10 object-contain h-auto" />
+        <p>Not signed in</p>
+      </a>
+    </div>
+  </header>
 
   <div class="featured-tab" id="featuredSection">
     <img src="../../images/Foods/Grilled_Cheese_008-1-c81076b16bc44caea8077666695be94d.jpg" class="featured-img" id="featured-img" />

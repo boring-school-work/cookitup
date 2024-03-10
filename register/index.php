@@ -10,6 +10,21 @@
 </head>
 
 <body class="bg-[#dec3a4] font-mono">
+  <header class="bg-gradient-to-r from-purple-500 from-30% to-blue-400 flex py-3 px-8">
+    <div class="grow">
+      <div class="flex">
+        <img src="../assets/images/chef-hat.png" alt="chef hat" class="w-10 h-auto object-contain" />
+        <a href="../view/home/">
+          <img src="../assets/images/CookitUp white.png" alt="cookitup logo" class="w-44 h-auto" />
+        </a>
+      </div>
+    </div>
+    <a href="../view/home/" class="flex justify-center items-center gap-x-2">
+      <img src="../assets/images/compas.png" class="w-10 object-contain h-auto" />
+      <p class="text-white font-semibold">Home</p>
+    </a>
+  </header>
+
   <div class="flex justify-center">
     <div class="w-1/2">
       <img class="w-full object-cover h-screen" src="./../assets/images/register-image.jpg" alt="Food image" id="register-image">
@@ -17,7 +32,7 @@
     <div class="w-1/2 flex flex-col items-center justify-center text-center">
       <div class="mb-12 border-b-2 w-full border-b-orange-800">
         <h1 class="text-4xl">Create An Account</h1>
-        <div class="pb-4">Already Registered? <a class="text-purple-700 font-semibold" href="./../login/">Login</a></div>
+        <div class="pb-4 text-lg">Already Registered? <a class="text-purple-700 font-semibold" href="./../login/">Login</a></div>
       </div>
       <form id="register" name="register" class="w-1/2" method="post" action="../action/register_user.php">
         <div class="flex flex-col mb-4">
