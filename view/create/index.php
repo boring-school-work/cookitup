@@ -11,7 +11,31 @@
 
 <body class="bg-[#f1e8d5]">
 
-  <!-- PLACE NAVBAR HERE -->
+  <header class="bg-gradient-to-r from-purple-500 from-30% to-blue-400 flex py-3 px-8">
+    <div class="grow">
+      <div class="flex">
+        <img src="../../assets/images/chef-hat.png" alt="chef hat" class="w-10 h-auto object-contain" />
+        <a href="../home/">
+          <img src="../../assets/images/CookitUp white.png" alt="cookitup logo" class="w-44 h-auto" />
+        </a>
+      </div>
+    </div>
+    <div class="flex gap-x-5 justify-center items-center text-white font-semibold">
+      <a href="../home/" class="flex justify-center items-center gap-x-2">
+        <img src="../../assets/images/compas.png" class="w-10 object-contain h-auto" />
+        <p>Home</p>
+      </a>
+      <a href="../create/" class="flex justify-center items-center gap-x-1">
+        <img src=" ../../assets/images/create-icon.svg" alt="profile icon" class="w-10 object-contain h-auto" />
+        <p>Create</p>
+      </a>
+      <a href="../../login/" class="flex justify-center items-center gap-x-2">
+        <img src=" ../../assets/images/profile-user.png" alt="profile icon" class="w-10 object-contain h-auto" />
+        <p>Not signed in</p>
+      </a>
+    </div>
+  </header>
+
 
   <div class="text-center">
     <h1 class="font-bold text-4xl my-10">Add A Recipe</h1>
