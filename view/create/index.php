@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+  header("Location: ../home/");
+  exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +39,9 @@
       </a>
       <a href="../../login/" class="flex justify-center items-center gap-x-2">
         <img src=" ../../assets/images/profile-user.png" alt="profile icon" class="w-10 object-contain h-auto" />
-        <p>Not signed in</p>
+        <?php
+        echo "<p>" . $_SESSION['username'] . "</p>";
+        ?>
       </a>
     </div>
   </header>
