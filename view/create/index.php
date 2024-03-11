@@ -49,7 +49,7 @@ if (!isset($_SESSION['user_id'])) {
 
   <div class="text-center">
     <h1 class="font-bold text-4xl my-10">Add A Recipe</h1>
-    <form action="" name="create-recipe" id="create-recipe" class="flex flex-col gap-y-3">
+    <form action="../../functions/add_recipe_fxn.php" method="post" enctype="multipart/form-data" name="create-recipe" id="create-recipe" class="flex flex-col gap-y-3">
       <div class="flex justify-center items-center gap-x-3">
         <label for="title" class="text-lg w-36">Title</label>
         <input type="text" name="title" id="title" placeholder="What is the name of your recipe?" class="w-1/2 p-2 my-2 rounded-md border " required>
@@ -64,11 +64,15 @@ if (!isset($_SESSION['user_id'])) {
       </div>
       <div class="flex justify-center items-center gap-x-3">
         <label for="ingredient" class="text-lg w-36">Ingredients</label>
-        <textarea form="create-recipe" name="ingredient" id="ingredient" placeholder="List each ingredient on a new line" class="w-1/2 h-24 p-2 my-2 rounded-md border "></textarea>
+        <textarea form="create-recipe" name="ingredient" id="ingredient" placeholder="Separate each ingredient with a comma" class="w-1/2 h-24 p-2 my-2 rounded-md border "></textarea>
       </div>
       <div class="flex justify-center items-center gap-x-3">
-        <label for="directions" class="text-lg w-36">Directions</label>
-        <textarea form="create-recipe" name="directions" id="directions" placeholder="Place each step on a new line and separate them with 3 hyphens (---)" class="w-1/2 h-80 p-2 my-2 rounded-md border "></textarea>
+        <label for="cook-time" class="text-lg w-36">Estimated cook time</label>
+        <input type="number" name="cook-time" id="cook-time" placeholder="Estimated cook time in minutes" class="w-1/2 p-2 my-2 rounded-md border " required>
+      </div>
+      <div class="flex justify-center items-center gap-x-3">
+        <label for="instructions" class="text-lg w-36">Instructions</label>
+        <textarea form="create-recipe" name="instructions" id="instructions" placeholder="Place each step on a new line and separate them with 3 hyphens (---)" class="w-1/2 h-80 p-2 my-2 rounded-md border "></textarea>
       </div>
       <div class="flex justify-center">
         <input type="submit" value="Create Recipe" class="text-center w-1/4 p-2 my-2 rounded-md cursor-pointer border bg-purple-500 text-white font-bold" />
