@@ -23,7 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $userId = $_SESSION['user_id'];
   $image_path = upload_image($image);
 
-  // Prepare SQL statement
+  // break down ingredients into an array
+  // each ingredient is separated by a comma
+  $ingredients = explode(",", $ingredients);
+
+  // Prepare SQL statement to insert into recipes table
   $sql = mysqli_prepare(
     $conn,
     "INSERT INTO recipes (title, description, image_url, cook_time, instructions, author_id) 
@@ -36,9 +40,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Execute statement and check for success
   if (!mysqli_stmt_execute($sql)) {
     die("Internal Server Error: Could not insert into database.");
-  } else {
-    // Success message 
-    echo "Recipe added successfully!";
+  }
+
+  // set recipe id
+  $recipeId = $conn->insert_id;
+
+  // Insert into ingredients table: name, recipe_id
+  // start a transaction
+  $conn->begin_transaction();
+
+  try {
+    // add each ingredient 
+    foreach ($ingredients as $ingredient) {
+      $query = mysqli_prepare($conn, "INSERT INTO ingredients (name, recipe_id) VALUES (?, ?)");
+      mysqli_stmt_bind_param($query, "ss", trim($ingredient), $recipeId);
+      mysqli_stmt_execute($query);
+    }
+
+    // commit transactions
+    mysqli_commit($conn);
+  } catch (Exception $e) {
+    mysqli_rollback($conn);
+    die("Internal Server Error: Could not insert into database: " . $e->getMessage());
   }
 
   // Close the connection
