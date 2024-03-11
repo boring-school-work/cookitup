@@ -83,165 +83,28 @@ if (isset($_SESSION['username'])) {
   <br>
   <br>
 
-  <div class="explore-tab">
-    <h1 style="margin-left: 100px; color: #8A64D6; font-family: Cambria;">Explore</h1>
+  <div>
+    <h1 class="text-4xl ml-5 font-semibold text-purple-500">Explore</h1>
 
     <div class="search-container">
-      <form action="/action_page.php" class="search-bar">
+      <form action="" method="get" class="search-bar">
         <input type="text" placeholder="Search Recipe..." name="search">
         <button type="submit"> <img src="../../images/search23.png"> </button>
       </form>
     </div>
 
-    <div class="explore-row">
+    <!-- Show recipe cards -->
+    <div class="grid grid-cols-5 py-8">
+      <?php
+      include '../../functions/get_recipe_fxn.php';
+      include '../../settings/connection.php';
 
-      <div class="recipe-card" style="margin-left: 70px;"> <img src="../../images/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg" class="recipe-img" />
-        <div class="card-data">
-          Garlic Bell Pepper Pasta <br>
-          <img src="../../images/5-star.png" class="rating">
-          <button type="button" id="miniUserButton1" class="mini-user-button">
-            <span class="mini-button-icon"><img src="../../images/Users/a3lh4g4p0w881.jpg" class="mini-user-profile-pic"></span>
-            <span class="mini-button-text"> The Clean Goblin </span>
-          </button>
-        </div>
-      </div>
+      get_recipes($conn);
 
-      <div class="recipe-card"> <img src="../../images/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg" class="recipe-img" />
-        <div class="card-data">
-          Garlic Bell Pepper Pasta <br>
-          <img src="../../images/5-star.png" class="rating">
-          <button type="button" id="miniUserButton12" class="mini-user-button">
-            <span class="mini-button-icon"><img src="../../images/Users/a3lh4g4p0w881.jpg" class="mini-user-profile-pic"></span>
-            <span class="mini-button-text"> The Clean Goblin </span>
-          </button>
-        </div>
-      </div>
-
-      <div class="recipe-card"> <img src="../../images/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg" class="recipe-img" />
-        <div class="card-data">
-          Garlic Bell Pepper Pasta <br>
-          <img src="../../images/5-star.png" class="rating">
-          <button type="button" id="miniUserButton13" class="mini-user-button">
-            <span class="mini-button-icon"><img src="../../images/Users/a3lh4g4p0w881.jpg" class="mini-user-profile-pic"></span>
-            <span class="mini-button-text"> The Clean Goblin </span>
-          </button>
-        </div>
-      </div>
-
-      <div class="recipe-card"> <img src="../../images/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg" class="recipe-img" />
-        <div class="card-data">
-          Garlic Bell Pepper Pasta <br>
-          <img src="../../images/5-star.png" class="rating">
-          <button type="button" id="miniUserButton14" class="mini-user-button">
-            <span class="mini-button-icon"><img src="../../images/Users/a3lh4g4p0w881.jpg" class="mini-user-profile-pic"></span>
-            <span class="mini-button-text"> The Clean Goblin </span>
-          </button>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="explore-row">
-
-      <div class="recipe-card" style="margin-left: 70px;"> <img src="../../images/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg" class="recipe-img" />
-        <div class="card-data">
-          Garlic Bell Pepper Pasta <br>
-          <img src="../../images/5-star.png" class="rating">
-          <button type="button" id="miniUserButton2" class="mini-user-button">
-            <span class="mini-button-icon"><img src="../../images/Users/a3lh4g4p0w881.jpg" class="mini-user-profile-pic"></span>
-            <span class="mini-button-text"> The Clean Goblin </span>
-          </button>
-        </div>
-      </div>
-
-      <div class="recipe-card"> <img src="../../images/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg" class="recipe-img" />
-        <div class="card-data">
-          Garlic Bell Pepper Pasta <br>
-          <img src="../../images/5-star.png" class="rating">
-          <button type="button" id="miniUserButton22" class="mini-user-button">
-            <span class="mini-button-icon"><img src="../../images/Users/a3lh4g4p0w881.jpg" class="mini-user-profile-pic"></span>
-            <span class="mini-button-text"> The Clean Goblin </span>
-          </button>
-        </div>
-      </div>
-
-      <div class="recipe-card"> <img src="../../images/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg" class="recipe-img" />
-        <div class="card-data">
-          Garlic Bell Pepper Pasta <br>
-          <img src="../../images/5-star.png" class="rating">
-          <button type="button" id="miniUserButton23" class="mini-user-button">
-            <span class="mini-button-icon"><img src="../../images/Users/a3lh4g4p0w881.jpg" class="mini-user-profile-pic"></span>
-            <span class="mini-button-text"> The Clean Goblin </span>
-          </button>
-        </div>
-      </div>
-
-      <div class="recipe-card"> <img src="../../images/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg" class="recipe-img" />
-        <div class="card-data">
-          Garlic Bell Pepper Pasta <br>
-          <img src="../../images/5-star.png" class="rating">
-          <button type="button" id="miniUserButton24" class="mini-user-button">
-            <span class="mini-button-icon"><img src="../../images/Users/a3lh4g4p0w881.jpg" class="mini-user-profile-pic"></span>
-            <span class="mini-button-text"> The Clean Goblin </span>
-          </button>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="explore-row">
-
-      <div class="recipe-card" style="margin-left: 70px;"> <img src="../../images/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg" class="recipe-img" />
-        <div class="card-data">
-          Garlic Bell Pepper Pasta <br>
-          <img src="../../images/5-star.png" class="rating">
-          <button type="button" id="miniUserButton3" class="mini-user-button">
-            <span class="mini-button-icon"><img src="../../images/Users/a3lh4g4p0w881.jpg" class="mini-user-profile-pic"></span>
-            <span class="mini-button-text"> The Clean Goblin </span>
-          </button>
-        </div>
-      </div>
-
-      <div class="recipe-card"> <img src="../../images/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg" class="recipe-img" />
-        <div class="card-data">
-          Garlic Bell Pepper Pasta <br>
-          <img src="../../images/5-star.png" class="rating">
-          <button type="button" id="miniUserButton32" class="mini-user-button">
-            <span class="mini-button-icon"><img src="../../images/Users/a3lh4g4p0w881.jpg" class="mini-user-profile-pic"></span>
-            <span class="mini-button-text"> The Clean Goblin </span>
-          </button>
-        </div>
-      </div>
-
-      <div class="recipe-card"> <img src="../../images/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg" class="recipe-img" />
-        <div class="card-data">
-          Garlic Bell Pepper Pasta <br>
-          <img src="../../images/5-star.png" class="rating">
-          <button type="button" id="miniUserButton33" class="mini-user-button">
-            <span class="mini-button-icon"><img src="../../images/Users/a3lh4g4p0w881.jpg" class="mini-user-profile-pic"></span>
-            <span class="mini-button-text"> The Clean Goblin </span>
-          </button>
-        </div>
-      </div>
-
-      <div class="recipe-card"> <img src="../../images/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg" class="recipe-img" />
-        <div class="card-data">
-          Garlic Bell Pepper Pasta <br>
-          <img src="../../images/5-star.png" class="rating">
-          <button type="button" id="miniUserButton34" class="mini-user-button">
-            <span class="mini-button-icon"><img src="../../images/Users/a3lh4g4p0w881.jpg" class="mini-user-profile-pic"></span>
-            <span class="mini-button-text"> The Clean Goblin </span>
-          </button>
-        </div>
-      </div>
-
+      ?>
     </div>
 
   </div>
-  <br>
-  <br>
-  <br>
-  <br>
 
   <script src="../../assets/js/homepage.js"></script>
 </body>
