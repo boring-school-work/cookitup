@@ -87,7 +87,7 @@ if (isset($_SESSION['username'])) {
     <h1 class="text-4xl ml-5 font-semibold text-purple-500">Explore</h1>
 
     <div class="search-container">
-      <form action="" method="get" class="search-bar">
+      <form action="../../functions/search_fxn.php" method="get" class="search-bar">
         <input type="text" placeholder="Search Recipe..." name="search">
         <button type="submit"> <img src="../../images/search23.png"> </button>
       </form>
