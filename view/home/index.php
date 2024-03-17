@@ -70,10 +70,6 @@ if (isset($_SESSION['username'])) {
       <a> See Recipe → </a>
       <br>
       <br>
-      <button type="button" id="userButton" class="user-button">
-        <span class="button-text" id="username"> The Clean Goblin </span>
-        <span class="button-icon"><img src="../../images/Users/a3lh4g4p0w881.jpg" class="user-profile-pic" id="usericon"></span>
-      </button>
     </h1>
 
     <img src="../../images/left-chevron.png" class="chevron-left" id="left-arrow" />
@@ -87,7 +83,7 @@ if (isset($_SESSION['username'])) {
     <h1 class="text-4xl ml-5 font-semibold text-purple-500">Explore</h1>
 
     <div class="search-container">
-      <form action="../../functions/search_fxn.php" method="get" class="search-bar">
+      <form action="#" method="get" class="search-bar">
         <input type="text" placeholder="Search Recipe..." name="search">
         <button type="submit"> <img src="../../images/search23.png"> </button>
       </form>
@@ -99,8 +95,11 @@ if (isset($_SESSION['username'])) {
       include '../../functions/get_recipe_fxn.php';
       include '../../settings/connection.php';
 
-      get_recipes($conn);
-
+      if (isset($_GET['search'])) {
+        get_searched_recipes($conn, $_GET['search']);
+      } else {
+        get_recipes($conn);
+      }
       ?>
     </div>
 

@@ -31,3 +31,31 @@ function get_recipes($conn)
       </a>";
   }
 }
+
+function get_searched_recipes($conn, $search_query)
+{
+  $search_query = $conn->real_escape_string($search_query);
+  $sql = "SELECT * FROM (SELECT recipe_id, title, image_url, description, CONCAT(fname, ' ', lname) as author_name FROM recipes INNER JOIN users WHERE recipes.author_id = users.user_id)tmp1 WHERE tmp1.title LIKE '%$search_query%' OR tmp1.description LIKE '%$search_query%'";
+  $result = $conn->query($sql);
+
+  if ($result) {
+    foreach ($result as $row) {
+      $title = $row['title'];
+      $image_url = '../../' . $row['image_url'];
+      $author_name = $row['author_name'];
+      $recipe_id = $row['recipe_id'];
+      echo "
+        <a href='../post?id=$recipe_id' class='recipe-card' style='margin-left: 70px;'> <img src=$image_url />
+        <div class='card-data'>
+          $title<br>
+          <img src='../../images/5-star.png' class='rating'>
+          <button type='button' id='miniUserButton1' class='mini-user-button'>
+            <span class='mini-button-icon'><img src='../../images/Users/a3lh4g4p0w881.jpg' class='mini-user-profile-pic'></span>
+            <span class='mini-button-text'>$author_name</span>
+          </button>
+        </div>
+        </a>";
+    }
+  }
+  $conn->close();
+}
