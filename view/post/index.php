@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+include '../../settings/connection.php';
+include '../../functions/view_recipe_fxn.php';
+
 $path = "";
 $name = "";
 
@@ -11,6 +14,10 @@ if (isset($_SESSION['username'])) {
   $path = "../../login/";
   $name = "Not signed in";
 }
+
+$id = $_GET['id'];
+$recipe = get_recipe_data($conn, $id);
+$image_url = '../../' . $recipe['image_url'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -60,40 +67,42 @@ if (isset($_SESSION['username'])) {
   </header>
 
   <!-- Header for Recipe -->
-  <div class="flex justify-center items-start gap-x-5">
-    <div>
-      <img src="../../assets/images/register-image.jpg" class="object-cover w-96 h-96" alt="recipe image" />
-    </div>
-    <div class="flex flex-col justify-between w-auto h-96">
-      <div class="grow mt-20">
-        <h3 class="capitalize font-semibold text-3xl text-center mb-3">title of recipe</h3>
-        <p class="">A dish of fried plantain and baked beans</p>
+  <div class="flex justify-center items-center gap-x-5 w-full">
+    <img src=<?php echo $image_url ?> class="object-cover w-96 h-96" alt="recipe image" />
+    <div class="flex flex-col w-1/4">
+      <div class="mb-16">
+        <h3 class="capitalize font-semibold text-3xl mb-3"><?php echo $recipe['title'] ?></h3>
+        <p class=""><?php echo $recipe['description'] ?></p>
       </div>
       <div>
-        <p class="italic font-semibold pb-5">by: John Doe</p>
+        <p class="italic pb-1">Estimated cooked time (minutes): <?php echo $recipe['cook_time'] ?></p>
+        <p class="italic font-semibold pb-5">by: <?php echo $recipe['author_name'] ?></p>
       </div>
     </div>
   </div>
 
   <!-- Ingredients & Direction -->
-  <div class="mt-8 flex justify-center gap-x-10 px-52">
+  <div class="mt-8 flex justify-center gap-x-10 px-52 pb-10">
     <div class="flex flex-col">
-      <h3 class="text-xl pb-2">Ingredients</h3>
+      <h3 class="text-2xl pb-2">Ingredients</h3>
       <ul>
-        <li>Tomatoes</li>
-        <li>Tomatoes</li>
-        <li>Tomatoes</li>
-        <li>Tomatoes</li>
+        <?php
+        foreach ($recipe['ingredients'] as $ingredient) {
+          foreach ($ingredient as $key => $value) {
+            echo "<li class='py-1'>" . ucfirst($value) . "</li>";
+          }
+        }
+        ?>
       </ul>
     </div>
     <div class="grow w-full">
-      <h3 class="text-xl border-b-2 border-purple-300 w-full pb-2">Instructions</h3>
-      <ul class="pl-5">
-        <li class="py-3">Step 1</li>
-        <li class="py-3">Step 2</li>
-        <li class="py-3">Step 3</li>
-        <li class="py-3">Step 4</li>
-      </ul>
+      <h3 class="text-3xl border-b-2 border-purple-300 w-full pb-2">Instructions</h3>
+      <ol class="pl-5 list-decimal mx-10">
+        <?php
+        $instructions = explode("---", $recipe['instructions']);
+        echo "<li class='py-3'>" . implode("</li><li class='py-3'>", $instructions) . "</li>";
+        ?>
+      </ol>
     </div>
   </div>
 

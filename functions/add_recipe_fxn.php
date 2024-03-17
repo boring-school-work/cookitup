@@ -67,5 +67,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Close the connection
   $conn->close();
 
-  // TODO: Redirect to post page
+  header("Location: ../view/post?id=$recipeId");
+  exit();
 }
