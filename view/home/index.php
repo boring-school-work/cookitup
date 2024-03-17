@@ -41,11 +41,13 @@ if (isset($_SESSION['username'])) {
       </a>
       <?php
       // show create button if user is a creator
-      if ($_SESSION['role_id'] == 1 || $_SESSION['role_id'] == 3) {
-        echo "<a href='../create/' class='flex justify-center items-center gap-x-1'>
-        <img src='../../assets/images/create-icon.svg' alt='profile icon' class='w-10 object-contain h-auto' />
-        <p>Create</p>
-      </a>";
+      if (isset($_SESSION['role_id'])) {
+        if ($_SESSION['role_id'] == 1 || $_SESSION['role_id'] == 3) {
+          echo "<a href='../create/' class='flex justify-center items-center gap-x-1'>
+             <img src='../../assets/images/create-icon.svg' alt='profile icon' class='w-10 object-contain h-auto' />
+             <p>Create</p>
+           </a>";
+        }
       }
 
       // dynamically login or logout button
