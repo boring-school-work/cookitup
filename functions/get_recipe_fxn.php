@@ -17,10 +17,9 @@ function get_recipes($conn)
     $image_url = '../../' . $row['image_url'];
     $author_name = $row['author_name'];
 
-    // TODO: use recipe_id to link to the recipe page (which is in view/post)
-    /* $recipe_id = $row['recipe_id']; */
+    $recipe_id = $row['recipe_id'];
     echo "
-      <div class='recipe-card' style='margin-left: 70px;'> <img src=$image_url />
+      <a href='../post?id=$recipe_id' class='recipe-card' style='margin-left: 70px;'> <img src=$image_url />
         <div class='card-data'>
           $title<br>
           <img src='../../images/5-star.png' class='rating'>
@@ -29,6 +28,6 @@ function get_recipes($conn)
             <span class='mini-button-text'>$author_name</span>
           </button>
         </div>
-      </div>";
+      </a>";
   }
 }
