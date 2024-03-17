@@ -9,6 +9,7 @@
  */
 function get_recipe_data($conn, $id)
 {
+  $id = (int) $conn->real_escape_string($id);
   $result = $conn->query(
     "
     SELECT title, description, cook_time, image_url, instructions,
