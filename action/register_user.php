@@ -32,6 +32,7 @@ try {
   mysqli_commit($conn);
 } catch (mysqli_sql_exception $e) {
   mysqli_rollback($conn);
+  /* echo "Error: " . $e->getMessage(); */
   exit();
 }
 
