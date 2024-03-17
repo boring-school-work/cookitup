@@ -45,7 +45,7 @@
         </div>
         <div class="flex flex-col mb-4">
           <label for="email" class="text-left text-lg">Email Address:</label>
-          <input type="email" id="email" name="email" placeholder=" johnmwangi@gmail.com " pattern="^[a-z._\-0-9]*[@][a-z]*.(?:...com)$" class="px-10 py-3 rounded-sm" autocomplete="off" required>
+          <input type="email" id="email" name="email" placeholder=" johnmwangi@gmail.com " pattern="^.+?@([A-Za-z]+(\.[A-Za-z]+)+).*[A-Za-z]+$" class="px-10 py-3 rounded-sm" autocomplete="off" required>
         </div>
         <div class="flex flex-col mb-4">
           <label for="passwd" class="text-left text-lg">Password:</label>
