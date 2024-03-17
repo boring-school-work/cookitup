@@ -36,5 +36,5 @@ their love for food.
 For file upload to work, you need to give the `assets/uploads` folder write permissions.
 
 ```console
-chomd a+w assets/uploads
+chmod a+w assets/uploads
 ```
