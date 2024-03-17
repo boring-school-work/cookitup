@@ -43,7 +43,7 @@
           echo "<p style='color:red; font-weight:bold'>incorrect username or password</p>";
         }
         ?>
-        <input type="email" name="email" placeholder="Email" id="email" required pattern="^[a-z._\-0-9]*[@][a-z]*.(?:...com)$"> <br><br>
+        <input type="email" name="email" placeholder="Email" id="email" required pattern="^.+?@([A-Za-z]+(\.[A-Za-z]+)+).*[A-Za-z]+$"> <br><br>
         <input type="password" name="password" id="password" placeholder="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"> <br>
         <button type="submit">Login</button>
       </form>
