@@ -9,9 +9,10 @@
  */
 function get_recipe_data($conn, $id)
 {
+  $id = (int) $conn->real_escape_string($id);
   $result = $conn->query(
     "
-    SELECT title, description, cook_time, image_url, instructions,
+    SELECT author_id, title, description, cook_time, image_url, instructions,
     CONCAT(fname, ' ', lname) AS author_name
     FROM recipes
     INNER JOIN users

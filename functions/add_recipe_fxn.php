@@ -12,12 +12,12 @@ require_once("./upload.php");
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   // Get form data
-  $title = $_POST['title'];
-  $description = $_POST['description'];
+  $title = $conn->real_escape_string($_POST['title']);
+  $description = $conn->real_escape_string($_POST['description']);
   $image =  $_FILES['food-image'];
-  $ingredients = $_POST['ingredient'];
-  $instructions = $_POST['instructions'];
-  $cook_time = $_POST['cook-time'];
+  $ingredients = $conn->real_escape_string($_POST['ingredient']);
+  $instructions = $conn->real_escape_string($_POST['instructions']);
+  $cook_time = $conn->real_escape_string($_POST['cook-time']);
 
   // get other data for database
   $userId = $_SESSION['user_id'];

@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+if (!isset($_GET['id'])) {
+  header('Location: ../home/');
+  exit();
+}
+
 include '../../settings/connection.php';
 include '../../functions/view_recipe_fxn.php';
 
@@ -82,7 +87,7 @@ $image_url = '../../' . $recipe['image_url'];
   </div>
 
   <!-- Ingredients & Direction -->
-  <div class="mt-8 flex justify-center gap-x-10 px-52 pb-10">
+  <div class="mt-8 flex justify-center gap-x-10 px-52 pb-3">
     <div class="flex flex-col">
       <h3 class="text-2xl pb-2">Ingredients</h3>
       <ul>
@@ -105,7 +110,17 @@ $image_url = '../../' . $recipe['image_url'];
       </ol>
     </div>
   </div>
-
+  <?php
+  if ($_SESSION['user_id'] == $recipe['author_id']) {
+    echo "<div class='flex gap-x-3 justify-end mb-10 mx-10'>
+      <form action='../../functions/delete_recipe_fxn.php' method='get'>
+        <input class='hidden' name='recipe_id' value=$id />
+        <input type='submit' value='Delete' class='px-4 py-1 bg-red-500 text-white rounded-lg cursor-pointer' />
+      </form>
+      </div>
+";
+  }
+  ?>
 </body>
 
 </html>
